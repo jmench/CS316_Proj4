@@ -1,0 +1,39 @@
+Author:
+    Jordan Menchen
+
+References:
+    Only ones we used in class
+
+Collaboration:
+    None
+
+URL:
+    https://www.https://www.cs.uky.edu/~jkme226/Projects/P4_Menchen/p4.php
+
+Description:
+    This is a simple web application written in PHP that displays a form where
+    the user can select from different values that are fed in through a JSON
+    file. Upon submitting, the webpage displays information about the selected
+    value from the form.
+
+Questions:
+    1.  A) HTML form -> working
+        B) dynamic OPTIONS for SELECT fields -> working
+        C) HTML report -> working
+        D) dynamic fields for report (no hard-coded fieldnames) -> working
+        E) EXTRA CREDIT 1 -> not implemented
+        F) EXTRA CREDIT 2 -> not implemented
+        G) EXTRA CREDIT 3 -> not implemented
+    2. My program will return a JSON error from json_last_error() if there is an
+        issue with the "sourcedata" URL. If the URL is valid, the program will
+        use json_decode on the URL string to create an array and then
+        display all the information in the first object of the JSON file at the
+        top. Below, separated into paragraphs, will be the rest of the
+        information from the second object in the JSON file, as requested in the
+        specifications.
+    3. My program error checks any JSON file that is submitted. Regardless of
+        the "sourcedata" value in the GET submission, the program checks the
+        relevant JSON object for the URL field, and tries to create a new JSON
+        object from that URL. If it is valid, it will print out a report as
+        specified. If it is invalid, json_last_error() will print a proper error
+        report to the user.
